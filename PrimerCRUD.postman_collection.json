@@ -1,342 +1,598 @@
 {
-  "info": {
-    "_postman_id": "770164f0-8cbb-4a2e-9c74-36f734dd9965",
-    "name": "PrimerCRUD",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "51863926",
-    "_collection_link": "https://go.postman.co/collection/51863926-770164f0-8cbb-4a2e-9c74-36f734dd9965?source=collection_link"
-  },
-  "item": [
-    {
-      "name": "CREAR PROPIETARIO",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"apellido\": \"Sin Nombre\"\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/propietarios",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "propietarios"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "LISTAR TODOS LOS PROPIETARIOS",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/propietarios",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "propietarios"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "VER PROPIETARIO ESPECÍFICO",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/propietarios/1",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "propietarios",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "ACTUALIZAR PROPIETARIO",
-      "request": {
-        "method": "PUT",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"nombre\": \"Juan Carlos\",\r\n    \"apellido\": \"Pérez García\"\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/propietarios/1",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "propietarios",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "CREAR ANIMAL",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"nombre\": \"Firulais\",\r\n    \"tipo\": \"perro\",\r\n    \"peso\": 15.0,\r\n    \"id_persona\": 999\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/animales",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "animales"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "LISTAR TODOS LOS ANIMALES",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/animales",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "animales"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "VER ANIMAL ESPECÍFICO",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/animales/2",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "animales",
-            "2"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "ACTUALIZAR ANIMAL",
-      "request": {
-        "method": "PUT",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"peso\": 26.8,\r\n    \"comentarios\": \"Animal recuperándose bien. Ganó peso. Continuar con tratamiento actual.\"\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/animales/2",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "animales",
-            "2"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "ELIMINAR ANIMAL",
-      "request": {
-        "method": "DELETE",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/animales/4",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "animales",
-            "4"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "ELIMINAR PROPIETARIO",
-      "request": {
-        "method": "DELETE",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/propietarios/1",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "propietarios",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "VERIFICAR que los animales se eliminaron",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/animales",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "animales"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "INTENTAR ver animal eliminado",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/animales/2",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "animales",
-            "2"
-          ]
-        }
-      },
-      "response": []
-    }
-  ]
+	"info": {
+		"_postman_id": "770164f0-8cbb-4a2e-9c74-36f734dd9965",
+		"name": "PrimerCRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51863926",
+		"_collection_link": "https://bidaneolaya-7796380.postman.co/workspace/Olaya-Baa-Bidane's-Workspace~e171d6bc-4f46-40c9-846a-ca7d7f193c18/collection/51863926-770164f0-8cbb-4a2e-9c74-36f734dd9965?action=share&source=collection_link&creator=51863926"
+	},
+	"item": [
+		{
+			"name": "CREAR PROPIETARIO - Juan Pérez",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Pérez\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/propietarios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"propietarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR PROPIETARIO - María García",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"María\",\r\n    \"apellido\": \"García\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/propietarios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"propietarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR PROPIETARIO - Pedro Sánchez",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Pedro\",\r\n    \"apellido\": \"Sánchez\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/propietarios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"propietarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR PROPIETARIO - error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"apellido\": \"Sin Nombre\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/propietarios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"propietarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LISTAR TODOS LOS PROPIETARIOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/propietarios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"propietarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VER PROPIETARIO ESPECÍFICO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/propietarios/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"propietarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ACTUALIZAR PROPIETARIO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Juan Carlos\",\r\n    \"apellido\": \"Pérez García\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/propietarios/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"propietarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR ANIMAL - Max (Perro de Juan)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Max\",\r\n    \"tipo\": \"perro\",\r\n    \"peso\": 25.5,\r\n    \"enfermedad\": \"Fractura de pata\",\r\n    \"comentarios\": \"Requiere reposo absoluto durante 2 semanas. Aplicar vendaje diariamente.\",\r\n    \"id_persona\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR ANIMAL - Luna (Gato de Juan)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Luna\",\r\n    \"tipo\": \"gato\",\r\n    \"peso\": 4.2,\r\n    \"enfermedad\": \"Infección respiratoria\",\r\n    \"comentarios\": \"Administrar antibióticos cada 8 horas. Mantener aislado de otros animales.\",\r\n    \"id_persona\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR ANIMAL - Coco (Hamster de María)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Coco\",\r\n    \"tipo\": \"hamster\",\r\n    \"peso\": 0.15,\r\n    \"enfermedad\": null,\r\n    \"comentarios\": \"Revisión de rutina. Animal sano.\",\r\n    \"id_persona\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR ANIMAL - Bugs (Conejo de Pedro)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Bugs\",\r\n    \"tipo\": \"conejo\",\r\n    \"peso\": 2.8,\r\n    \"enfermedad\": \"Problemas dentales\",\r\n    \"comentarios\": \"Necesita limpieza dental profesional. Dieta blanda por 1 semana.\",\r\n    \"id_persona\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR ANIMAL - error Animal sin nombre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo\": \"perro\",\r\n    \"peso\": 10.5,\r\n    \"id_persona\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR ANIMAL - error Propietario no existe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Firulais\",\r\n    \"tipo\": \"perro\",\r\n    \"peso\": 15.0,\r\n    \"id_persona\": 999\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LISTAR TODOS LOS ANIMALES",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VER ANIMAL ESPECÍFICO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ACTUALIZAR ANIMAL",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"peso\": 26.8,\r\n    \"comentarios\": \"Animal recuperándose bien. Ganó peso. Continuar con tratamiento actual.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ELIMINAR ANIMAL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ELIMINAR PROPIETARIO",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/propietarios/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"propietarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VERIFICAR que los animales se eliminaron",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INTENTAR ver animal eliminado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/animales/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"animales",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
 }
